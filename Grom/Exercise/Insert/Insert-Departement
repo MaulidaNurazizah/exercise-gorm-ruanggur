@@ -1,0 +1,31 @@
+package main
+
+import (
+	"database/sql"
+	"fmt"
+	"time"
+
+	"gorm.io/driver/postgres"
+	"gorm.io/gorm"
+)
+
+type User struct {
+	ID               uint
+	Nama_departement string
+}
+
+func main() {
+	Hasil := "host=localhost user=postgres password=maulida1205 dbname=test_db_camp port=5432 sslmode=disable TimeZone=Asia/Jakarta"
+	db, err := gorm.Open(postgres.Open(Hasil), &gorm.Config{})
+	if err != nil {
+		panic("failed to connect databese")
+	}
+
+	db.Create(&User{ID: 1001, Nama_departement: "Mari_Belajar"} {ID: 1002, Nama_departement: "RuangGuru"} {ID: 1003, Nama_departement: "Skil_Academy"} {ID: 1004, Nama_departement: "Belajar"} {ID: 1005, Nama_departement: "Mitra"})
+	if err := db.Error; err != nil {
+		fmt.Println(err)
+	}
+
+	fmt.Println("Insert Succes")
+
+}

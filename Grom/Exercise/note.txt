@@ -1,0 +1,19 @@
+Buatlah 2 table dengan struktur berikut
+
+-Table Employee
+    *id
+    *name
+    *address
+    *age
+    *birthdate
+    *level (Staff, Supervisor, Manager)
+    *id_department
+
+-Table department 
+    *id 
+    *nama_department
+
+
+- Buatlah masing masing 5 input (insert data ) ke masing masing table tersebut
+- Buatlah 2 Query Select Dari 2 table tersebut
+- Lakukanlah operasional Update dan Delete
